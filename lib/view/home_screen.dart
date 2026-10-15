@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mock_app/controller/user_controller.dart';
+import 'package:mock_app/view/user_details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(18),
-                            onTap: () {},
+                            onTap: () =>Get.to(UserDetailsScreen(c.users[index])),
                             child: Padding(
                               padding: const EdgeInsets.all(16),
                               child: Row(
